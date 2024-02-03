@@ -12,5 +12,5 @@ _start:
  int 0x80 ; execute the interuption 
  ;exit system call
  mov eax, 1 ; interuption number: 4 => sys_exit
- mov ebx, 0 ; set ebx to zero (optional)
+ mov ebx, 0 ; set ebx to zero (the exit code) 
  int 80h

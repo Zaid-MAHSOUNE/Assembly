@@ -1,5 +1,11 @@
 # Variables
-**Declaration**
+**Initialized Declaration**
+```assembly
+    ;[variable-name]    define-directive   initial-value
+        choice              db              'Y'    
+```
+
+**Uninitialized Declaration**
 ```assembly
     ;[variable-name]    define-directive   initial-value
         choice              db              'Y'    
