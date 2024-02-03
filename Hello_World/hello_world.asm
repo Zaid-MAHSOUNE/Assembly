@@ -1,18 +1,16 @@
 section .data
-msg1 db 'Hello world!',10
-msg2 db 'Hello world!',10
-len1 equ msg2 - msg1
-len2 equ msg2-$
+msg1 dw 'Hello world!',10
+len1 equ $ - msg1
 section .text
 global _start
 _start:
  ;sys_write system call
- mov eax, 4
- mov ebx, 1
- mov ecx, msg2
- mov edx, len1
- int 80h
+ mov eax, 4 ; interuption number: 4 => sys_write
+ mov ebx, 1 ; output destination: 1 => standard ouput: screen  
+ mov ecx, msg1 ; message content
+ mov edx, len1 ; length
+ int 0x80 ; execute the interuption 
  ;exit system call
- mov eax, 1
- mov ebx, 0
+ mov eax, 1 ; interuption number: 4 => sys_exit
+ mov ebx, 0 ; set ebx to zero (optional)
  int 80h
