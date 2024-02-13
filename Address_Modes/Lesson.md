@@ -45,5 +45,3 @@ Addressing modes in assembly language determine how the operands or data are acc
     'mov' [destination] [source]
      mov   ebx          , 10    
 ```
-
-These addressing modes provide flexibility in accessing data and operands in memory or registers, allowing efficient data manipulation and control flow in assembly language programming. The availability and supported addressing modes may vary depending on the specific processor architecture and assembly language instruction set.
