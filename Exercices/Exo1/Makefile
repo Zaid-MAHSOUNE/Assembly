@@ -10,7 +10,7 @@ LDFLAGS=-m elf_i386
 
 
 # Define the source files and the output executable
-SRCS=hello_world.asm
+SRCS=bonjour.asm
 OBJS=$(SRCS:.asm=.o)
 OUTFILE=executable
 
